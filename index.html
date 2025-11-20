@@ -2,6 +2,10 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+
+    <!-- OBRIGATÓRIO PARA FUNCIONAR NO CELULAR -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Joãoptest</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -163,7 +167,7 @@
         </main>
 
         <footer class="rodape">
-            <p> SIte feito por Joao Pedro — Projeto de estudo em HTML, CSS</p>
+            <p>Site feito por Joao Pedro — Projeto de estudo em HTML, CSS</p>
         </footer>
     </div>
 
@@ -176,7 +180,6 @@
 
         botoesOdd.forEach(botao => {
             botao.addEventListener("click", () => {
-
                 botoesOdd.forEach(b => b.classList.remove("selecionada"));
                 botao.classList.add("selecionada");
 

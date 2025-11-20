@@ -1,0 +1,366 @@
+/* Reset simples */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo */
+body {
+    background: radial-gradient(circle at top, #111827, #020617 60%);
+    color: #e5e7eb;
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 16px 12px 32px;
+}
+
+/* --------------------- */
+/*       BANNER          */
+/* --------------------- */
+.banner-jogo {
+    margin-top: 20px;
+    margin-bottom: 28px;
+    background: #0f172a;
+    border: 1px solid #1e293b;
+    padding: 14px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.banner-jogo img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.banner-centro {
+    text-align: center;
+}
+
+.banner-centro h1 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.banner-centro p {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* Topo */
+.topo {
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Aqui usamos o ESCUDO DO SPFC como logo */
+.logo-bola {
+    width: 36px;
+    height: 36px;
+    background-image: url("spfc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.logo-texto h1 {
+    font-size: 22px;
+}
+
+.logo-texto p {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* Menu topo */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #9ca3af;
+    padding: 4px 8px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+}
+
+.menu a:hover {
+    color: #e5e7eb;
+    border-color: #1f2937;
+    background: #020617;
+}
+
+/* Intro */
+.intro {
+    margin-bottom: 26px; /* Aumentei */
+}
+
+.intro-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.intro h2 {
+    font-size: 20px;
+}
+
+.intro p {
+    font-size: 14px;
+    color: #d1d5db;
+}
+
+/* Badge */
+.badge {
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(22, 163, 74, 0.1);
+    border: 1px solid #22c55e;
+    color: #bbf7d0;
+}
+
+/* GRID PRINCIPAL */
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1fr;
+    gap: 22px; /* MAIS ESPAÇO */
+}
+
+/* Card */
+.card {
+    background: #020617;
+    border-radius: 10px;
+    padding: 14px;
+    border: 1px solid #1f2937;
+}
+
+/* Cards de jogo */
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.jogo .detalhe {
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 10px;
+}
+
+.linha-times {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.linha-times .vs {
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+.texto-odd {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+/* Odds */
+.odds-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+button.odd {
+    flex: 1 1 30%;
+    padding: 8px 8px;
+    border-radius: 999px;
+    border: 1px solid #374151;
+    background: #020617;
+    color: #e5e7eb;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+}
+
+button.odd:hover {
+    background: #111827;
+    border-color: #22c55e;
+}
+
+button.odd.selecionada {
+    background: #22c55e;
+    color: #020617;
+    border-color: #22c55e;
+    transform: translateY(-1px);
+}
+
+/* SIMULADOR */
+.aposta label {
+    font-size: 13px;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+input {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #374151;
+    background: #020617;
+    color: #e5e7eb;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #22c55e;
+}
+
+.retorno-label {
+    font-size: 13px;
+    margin: 4px 0 2px;
+}
+
+#retorno {
+    font-size: 16px;
+    font-weight: bold;
+    color: #22c55e;
+}
+
+/* EXTRA GRID */
+.extra-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; /* Aumentado */
+    margin-top: 28px;
+}
+
+/* Info */
+.info-partida ul {
+    list-style: none;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.info-partida li {
+    margin-bottom: 4px;
+}
+
+.info-partida li span {
+    color: #9ca3af;
+}
+
+/* Tabela */
+.proximos table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+    font-size: 13px;
+}
+
+.proximos th,
+.proximos td {
+    border-bottom: 1px solid #1f2937;
+    padding: 4px 2px;
+    text-align: left;
+}
+
+.proximos th {
+    color: #9ca3af;
+    font-weight: normal;
+}
+
+/* Dicas */
+.dicas {
+    margin-top: 26px;
+}
+
+.dicas-lista {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.dica-item h4 {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.dica-item p {
+    font-size: 12px;
+    color: #d1d5db;
+}
+
+/* Rodapé */
+.rodape {
+    margin-top: 28px;
+    font-size: 11px;
+    color: #9ca3af;
+    text-align: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .extra-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dicas-lista {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .banner-jogo {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    button.odd {
+        flex: 1 1 100%;
+    }
+
+    .dicas-lista {
+        grid-template-columns: 1fr;
+    }
+}

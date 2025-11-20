@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Joãoptest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page">
+
+        <!-- BANNER DO JOGO -->
+        <div class="banner-jogo">
+            <div class="banner-time">
+                <img src="spfc.png" alt="São Paulo">
+            </div>
+
+            <div class="banner-centro">
+                <h1>São Paulo x Corinthians</h1>
+                <p>Clássico — Brasileirão Série A</p>
+            </div>
+
+            <div class="banner-time">
+                <img src="corinthians.jpg" alt="Corinthians">
+            </div>
+        </div>
+
+        <!-- TOPO -->
+        <header class="topo">
+            <div class="logo">
+                <span class="logo-bola"></span>
+                <div class="logo-texto">
+                    <h1>Mini Apostas</h1>
+                    <p>Simulador simples de apostas esportivas</p>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <a href="#jogo-hoje">Jogo de hoje</a>
+                <a href="#proximos-jogos">Próximos jogos</a>
+                <a href="#simulador">Simulador</a>
+                <a href="#dicas">Dicas</a>
+            </nav>
+        </header>
+
+        <main>
+
+            <section class="intro" id="jogo-hoje">
+                <div class="intro-top">
+                    <h2>São Paulo x Corinthians</h2>
+                    <span class="badge">Jogo de hoje</span>
+                </div>
+                <p>Escolha uma odd, digite o valor da aposta e veja o retorno potencial.</p>
+            </section>
+
+            <section class="grid">
+
+                <article class="card jogo">
+                    <h3>Resultado final</h3>
+                    <p class="detalhe">Quem ganha o jogo?</p>
+
+                    <div class="linha-times">
+                        <span>São Paulo</span>
+                        <span class="vs">x</span>
+                        <span>Corinthians</span>
+                    </div>
+
+                    <p class="texto-odd">Escolha uma odd:</p>
+                    <div class="odds-row">
+                        <button class="odd" data-valor="2.10">São Paulo 2.10</button>
+                        <button class="odd" data-valor="3.10">Empate 3.10</button>
+                        <button class="odd" data-valor="2.80">Corinthians 2.80</button>
+                    </div>
+                </article>
+
+                <article class="card jogo">
+                    <h3>Total de gols (acima)</h3>
+                    <p class="detalhe">Quantidade de gols na partida</p>
+
+                    <p class="texto-odd">Escolha uma odd:</p>
+                    <div class="odds-row">
+                        <button class="odd" data-valor="1.70">+1.5 gols 1.70</button>
+                        <button class="odd" data-valor="2.20">+2.5 gols 2.20</button>
+                        <button class="odd" data-valor="3.40">+3.5 gols 3.40</button>
+                    </div>
+                </article>
+
+                <aside class="card aposta" id="simulador">
+                    <h3>Simulador de retorno</h3>
+
+                    <label for="valor">Valor apostado (R$):</label>
+                    <input id="valor" type="number" min="0" placeholder="Ex: 50">
+
+                    <p class="retorno-label">Retorno potencial:</p>
+                    <p id="retorno">Nenhuma odd selecionada</p>
+                </aside>
+
+            </section>
+
+            <section class="extra-grid">
+
+                <article class="card info-partida">
+                    <h3>Informações da partida</h3>
+                    <ul>
+                        <li><span>Campeonato:</span> Brasileirão Série A</li>
+                        <li><span>Data:</span> 20/11/2025</li>
+                        <li><span>Horário:</span> 21h00</li>
+                        <li><span>Estádio:</span> Morumbis</li>
+                        <li><span>Cidade:</span> São Paulo</li>
+                    </ul>
+                </article>
+
+                <article class="card proximos" id="proximos-jogos">
+                    <h3>Próximos jogos (exemplo)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Jogo</th>
+                                <th>Tipo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>24/11</td>
+                                <td>São Paulo x Palmeiras</td>
+                                <td>Clássico</td>
+                            </tr>
+                            <tr>
+                                <td>27/11</td>
+                                <td>Corinthians x Santos</td>
+                                <td>Clássico</td>
+                            </tr>
+                            <tr>
+                                <td>30/11</td>
+                                <td>Flamengo x São Paulo</td>
+                                <td>Brasileirão</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
+
+            </section>
+
+            <section class="card dicas" id="dicas">
+                <h3>Dicas básicas de apostas</h3>
+                <div class="dicas-lista">
+                    <div class="dica-item">
+                        <h4>1. Comece com valores baixos</h4>
+                        <p>Use o simulador para entender o impacto das odds nos retornos.</p>
+                    </div>
+                    <div class="dica-item">
+                        <h4>2. Observe o tipo de mercado</h4>
+                        <p>Resultado final, total de gols, handicap... Estude antes.</p>
+                    </div>
+                    <div class="dica-item">
+                        <h4>3. Pense no longo prazo</h4>
+                        <p>Apostas são entretenimento. Tenha limite e responsabilidade.</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="rodape">
+            <p> SIte feito por Joao Pedro — Projeto de estudo em HTML, CSS</p>
+        </footer>
+    </div>
+
+    <script>
+        let selecionada = null;
+
+        const botoesOdd = document.querySelectorAll(".odd");
+        const campoValor = document.getElementById("valor");
+        const textoRetorno = document.getElementById("retorno");
+
+        botoesOdd.forEach(botao => {
+            botao.addEventListener("click", () => {
+
+                botoesOdd.forEach(b => b.classList.remove("selecionada"));
+                botao.classList.add("selecionada");
+
+                selecionada = parseFloat(botao.getAttribute("data-valor"));
+                calcular();
+            });
+        });
+
+        campoValor.addEventListener("input", calcular);
+
+        function calcular() {
+            const valor = parseFloat(campoValor.value.replace(",", "."));
+
+            if (!selecionada || !valor || valor <= 0) {
+                textoRetorno.textContent = "Aguardando escolha de odd e valor...";
+                return;
+            }
+
+            const resultado = valor * selecionada;
+            textoRetorno.textContent = "R$ " + resultado.toFixed(2);
+        }
+    </script>
+
+</body>
+</html>
